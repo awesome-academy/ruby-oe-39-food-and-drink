@@ -1,4 +1,22 @@
 vi:
-  foods_drinks: "Foods and Drinks"
+  foods_drinks: "Foods And Drinks"
   english: "Tiếng Anh"
   vietnamese: "Tiếng Việt"
+  header:
+    home: "Trang chủ"
+    category: "Danh mục"
+    foods: "Thức ăn"
+    drinks: "Đồ uống"
+    contact: "Liên hệ"
+    language: "Ngôn ngữ"
+    cart: "Giỏ hàng"
+    login: "Đăng nhập"
+    register: "Đăng ký"
+  footer:
+    copy_right: "@2020 Copy right Foods And Drinks"
+  product:
+    new: "Mới"
+    discount: "10%"
+    name: "Food"
+    price: "20"
+    add_to_cart: "Thêm vào giỏ hàng"

@@ -13,7 +13,7 @@
         </form>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <%= link_to t("header.home"), "#", class: "nav-link" %>
+            <%= link_to t("header.home"), root_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -38,9 +38,23 @@
           <li class="nav-item">
             <%= link_to t("header.cart"), "#", class: "nav-link" %>
           </li>
-          <li class="nav-item">
-            <%= link_to t("header.login"), "#", class: "nav-link" %>
-          </li>
+          <% if logged_in? %>
+            <li class="dropdown nav-item">
+              <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                <%= t "header.account" %><b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to t("header.profile"), current_user, class: "dropdown-item" %></li>
+                <li><%= link_to t("header.settings"), "#", class: "dropdown-item" %></li>
+                <li class="divider"></li>
+                <li>
+                  <%= link_to t("header.log_out"), logout_path, method: "delete", class: "dropdown-item" %>
+                </li>
+              </ul>
+            </li>
+          <% else %>
+            <li class="nav-item"><%= link_to t("header.log_in"), login_path,  class: "nav-link" %></li>
+          <% end %>
           <li class="nav-item">
             <%= link_to t("header.register"), "#", class: "nav-link" %>
           </li>

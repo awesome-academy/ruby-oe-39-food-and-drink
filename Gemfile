@@ -8,7 +8,8 @@ gem "bcrypt", "3.1.13"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap", "~> 4.0.0"
 gem "config"
-gem "faker", :git => "https://github.com/faker-ruby/faker.git", :branch => "master"
+gem "faker", git: "https://github.com/faker-ruby/faker.git",
+              branch: "master"
 gem "font-awesome-rails"
 gem "image_processing", "1.9.3"
 gem "jbuilder", "~> 2.7"

@@ -60,3 +60,9 @@ vi:
         significant: false
         strip_insignificant_zeros: false
         unit: "VNĐ"
+  product_detail:
+    price: "Giá: "
+    stock: "Kho: "
+    p: " sản phẩm"
+    quantity: "Số lượng: "
+    product_find_nil: "Không tìm thấy sản phẩm này"

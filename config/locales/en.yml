@@ -1,4 +1,22 @@
 en:
-  foods_drinks: "Foods and Drinks"
+  foods_drinks: "Foods And Drinks"
   english: "English"
   vietnamese: "Vietnamese"
+  header:
+    home: "Home"
+    category: "Category"
+    foods: "Foods"
+    drinks: "Drinks"
+    contact: "Contact"
+    language: "Language"
+    cart: "Cart"
+    login: "Login"
+    register: "Register"
+  footer:
+    copy_right: "@2020 Copy right Foods And Drinks"
+  product:
+    new: "New"
+    discount: "10%"
+    name: "Food"
+    price: "20"
+    add_to_cart: "Add to cart"

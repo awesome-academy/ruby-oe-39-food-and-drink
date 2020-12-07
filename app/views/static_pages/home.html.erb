@@ -1,2 +1,12 @@
-<% provide :title, t("header.home") %>
-<%= render "products/product" %>
+<% provide(:title, t("header.home")) %>
+<div class="container text-center">
+  <hr>
+    <h1><%= t "product.list_product" %></h1>
+  <hr>
+  <div class="row">
+    <%= render @products || t("product.product_nil") %>
+  </div>
+  <div id="paginator">
+    <%= paginate @products, theme: "twitter-bootstrap-3" %>
+  </div>
+</div>

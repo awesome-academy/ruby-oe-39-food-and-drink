@@ -7,7 +7,7 @@ stages:
 jobs:
 - name: build:prepare
   stage: build
-image: manhbnt/ruby:2.7.1
+  image: manhbnt/ruby:2.7.1
   script:
   - cp database-ci.yml config/database.yml
   - bundle _2.1.4_ install --path vendor/bundle
@@ -18,7 +18,7 @@ image: manhbnt/ruby:2.7.1
 
 - name: test:rspec
   stage: test
-image: manhbnt/ruby:2.7.1
+  image: manhbnt/ruby:2.7.1
   services:
   - image: mysql:5.7.22
     name: mysql_test
@@ -35,9 +35,8 @@ image: manhbnt/ruby:2.7.1
 
 - name: test:rubocop
   stage: test
-image: manhbnt/ruby:2.7.1
+  image: manhbnt/ruby:2.7.1
   before_script:
   - bundle _2.1.4_ install --path vendor/bundle
   script:
-  - bundle exec rubocop --require rubocop/formatter/checkstyle_formatter --format
-RuboCop::Formatter::CheckstyleFormatter --no-color --out .framgia-ci-reports/rubocop.xml app/ lib/
+  - bundle exec rubocop --require rubocop/formatter/checkstyle_formatter --format RuboCop::Formatter::CheckstyleFormatter --no-color --out .framgia-ci-reports/rubocop.xml app/ lib/

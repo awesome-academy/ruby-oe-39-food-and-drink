@@ -8,6 +8,7 @@ gem "bcrypt", "3.1.13"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap", "~> 4.0.0"
 gem "config"
+gem "execjs"
 gem "faker", git: "https://github.com/faker-ruby/faker.git",
               branch: "master"
 gem "font-awesome-rails"
@@ -20,6 +21,7 @@ gem "puma", "~> 4.1"
 gem "rails", "~> 6.0.3", ">= 6.0.3.4"
 gem "rails-i18n"
 gem "sass-rails", ">= 6"
+gem "therubyracer"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 4.0"
 

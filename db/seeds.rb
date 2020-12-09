@@ -14,8 +14,8 @@ User.create!(name: "Admin",
     phone_number: Faker::Number.leading_zero_number(digits: 10)
   )
 end
-# Categories
 
+# Categories
 Category.create!(name: "Foods")
 Category.create!(name: "Drinks")
 foods=["Korean","Japanese","Chinese","Vietnam","Pizza","French"]
@@ -35,7 +35,7 @@ subCategories= Category.all-categories
     name: Faker::Food.dish,
     description: Faker::Food.description,
     price: Faker::Number.decimal(l_digits: 2),
-    quantity: Faker::Number.non_zero_digit
+    quantity: Faker::Number.non_zero_digit,
   )
 end
 

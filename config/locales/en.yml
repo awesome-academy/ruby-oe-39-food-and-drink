@@ -60,3 +60,9 @@ en:
         significant: false
         strip_insignificant_zeros: false
         unit: "$"
+  product_detail:
+    price: "Price: "
+    stock: "In stock: "
+    p: " products"
+    quantity: "Quantity: "
+    product_find_nil: "Not found this product"

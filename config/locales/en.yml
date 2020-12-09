@@ -89,6 +89,9 @@ en:
     not_found: "Not found order"
     old_price: "Total old price: "
     discount: "Discount: "
+    status_error: "Please check your order status!"
+    status_success: "Updated Success. Thank you!"
+    status_fail: "Fail to Update!"
   search:
     title: "Search"
     result_search: "Result of search"

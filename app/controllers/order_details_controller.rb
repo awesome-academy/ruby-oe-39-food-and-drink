@@ -8,7 +8,7 @@ class OrderDetailsController < ApplicationController
   private
 
   def load_order
-    @order = Order.find_by(id: params[:order_id])
+    @order = Order.find_by id: params[:order_id]
     return if @order
 
     flash[:danger] = t "order.not_found"

@@ -24,6 +24,8 @@ vi:
     name: "Food"
     price: "20"
     add_to_cart: "Thêm vào giỏ hàng"
+    list_product: "Danh sách sản phẩm"
+    product_nil: "Không có sản phẩm nào được hiển thị"
   sessions:
     show_error: "Email hoặc mật khẩu không hợp lệ"
     remember_me: "Ghi nhớ tôi"
@@ -41,3 +43,20 @@ vi:
     role: "Vai trò"
     email: "Email"
     phone: "Số điện thoại"
+  views:
+    pagination:
+      first: "« ĐẦU TIÊN"
+      last: "CUỐI CÙNG »"
+      previous: "‹ TRƯỚC"
+      next: "TIẾP ›"
+      truncate: "…"
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%n %u"
+        precision: 0
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "VNĐ"

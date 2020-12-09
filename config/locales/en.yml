@@ -24,6 +24,8 @@ en:
     name: "Food"
     price: "20"
     add_to_cart: "Add to cart"
+    list_product: "List Products"
+    product_nil: "There's no products is displayed"
   sessions:
     show_error: "Invalid email/password combination"
     remember_me: "Remember me"
@@ -41,3 +43,20 @@ en:
     role: "Role"
     email: "Email"
     phone: "Phone"
+  views:
+    pagination:
+      first: "« FIRST"
+      last: "LAST »"
+      previous: "‹ PREV"
+      next: "NEXT ›"
+      truncate: "…"
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%n %u"
+        precision: 0
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "$"

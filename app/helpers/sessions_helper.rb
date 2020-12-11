@@ -15,4 +15,30 @@ module SessionsHelper
     session.delete(:user_id)
     @current_user = nil
   end
+
+  def redirect_back_or default
+    redirect_to(session[:forwarding_url] || default)
+    session.delete(:forwarding_url)
+  end
+
+  def store_location
+    session[:forwarding_url] = request.original_url if request.get?
+  end
+
+  def current_carts
+    session[:carts] ||= Hash.new
+    @carts = session[:carts]
+  end
+
+  def check_quantity
+    return if params[:quantity].to_i <= @product.quantity &&
+              params[:quantity].to_i >= Settings.product.min_quantity
+
+    flash[:danger] = t "carts.invalid_quantity"
+    redirect_to root_path
+  end
+
+  def subtotal price, quantity
+    price * quantity
+  end
 end

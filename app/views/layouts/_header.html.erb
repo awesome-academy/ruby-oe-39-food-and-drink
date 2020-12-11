@@ -41,7 +41,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <%= link_to t("header.cart"), "#", class: "nav-link" %>
+            <%= link_to t("header.cart"), carts_path, class: "nav-link" %>
           </li>
           <% if logged_in? %>
             <li class="dropdown nav-item">

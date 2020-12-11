@@ -1,0 +1,26 @@
+<tr>
+  <td>
+    <div class="product-item">
+      <%= link_to @product do %>
+        <%= load_image_product @product %>
+      <% end %>
+      <div class="product-info">
+      <h4 class="product-title">
+        <%= link_to order.product.name, "#" %>
+      </h4>
+      <span><em><%= link_to order.product.category_name, "#" %></em></span>
+      <span><em><%= t "carts.in_stock" %></em> <%= order.product.quantity %></span>
+      </div>
+    </div>
+  </td>
+  <td class="text-center">
+  <div class="card custom-quantity">
+    <div class="count-input">
+      <%= number_field_tag(:quantity, order.quantity.to_i, min: Settings.product.min_quantity, max: order.product.quantity, class: "form-control mb-5 input-lg") %>
+    </div>
+  </div>
+  </td>
+  <td class="text-center text-lg text-medium"><strong><%= number_to_currency order.price %></strong></td>
+  <td class="text-center text-lg text-medium"><%= number_to_currency (subtotal order.price, order.quantity) %></td>
+  <td class="text-center"><a class="remove-from-cart" href="#" data-toggle="tooltip" title="" data-original-title="Remove item"><i class="fa fa-trash"></i></a></td>
+</tr>

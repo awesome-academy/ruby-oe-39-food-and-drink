@@ -28,6 +28,9 @@ class CartsController < ApplicationController
     end
     session[:carts] = @carts
     flash[:success] = t "carts.add_success"
+    respond_to do |format|
+      format.js
+    end
   end
 
   private

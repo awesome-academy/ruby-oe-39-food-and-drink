@@ -41,4 +41,8 @@ module SessionsHelper
   def subtotal price, quantity
     price * quantity
   end
+
+  def count_items
+    @count_item = session[:carts].size if session[:carts]
+  end
 end

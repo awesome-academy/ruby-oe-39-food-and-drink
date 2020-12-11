@@ -17,6 +17,8 @@ class Order < ApplicationRecord
   define_model_callbacks :cancel, only: :after
   after_cancel :update_quantity_product_cancel
 
+  scope :by_created_at, ->{order(delivery_time: :desc)}
+
   def cancel
     run_callbacks :cancel do
       canceled!

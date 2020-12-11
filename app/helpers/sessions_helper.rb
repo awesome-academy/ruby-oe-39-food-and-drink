@@ -46,4 +46,12 @@ module SessionsHelper
   def count_items
     @count_item = session[:carts].size if session[:carts]
   end
+
+  def check_admin
+    redirect_to root_path unless check_user_admin?
+  end
+
+  def check_user_admin?
+    current_user.admin?
+  end
 end

@@ -60,13 +60,16 @@ end
 end
 
 # Orders Details
-20.times do |n|
-  OrderDetail.create!(
-    order_id: Order.pluck(:id).sample,
-    product_id: Product.pluck(:id).sample,
-    price: Faker::Number.decimal(l_digits: 2),
-    quantity: rand(1..10)
-  )
+orders=Order.all
+orders.each do |order|
+  3.times do |n|
+    OrderDetail.create!(
+      order_id: order.id,
+      product_id: Product.pluck(:id).sample,
+      price: Faker::Number.decimal(l_digits: 2),
+      quantity: rand(1..10)
+    )
+  end
 end
 
 # Ratings

@@ -793,7 +793,7 @@ select.form-control {
 
 .containerr {
   background-color: $color_e5e5;
-  padding: 5px 20px 15px 20px;
+  padding: 5px 16px 15px 16px;
   border: 1px solid $lightgrey;
   border-radius: 20px;
 }
@@ -924,4 +924,10 @@ span.price {
   display: flex;
   justify-content: flex-end;
   margin: 10px;
+}
+
+.message {
+  color: $price_color;
+  display: flex;
+  justify-content: flex-end;
 }

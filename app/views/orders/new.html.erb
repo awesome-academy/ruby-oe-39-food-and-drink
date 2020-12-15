@@ -35,7 +35,6 @@
         <div class="voucher"><%= t "voucher.title" %>
           <%= form_tag(new_order_path, method: :post, remote: true) do %>
             <%= text_field(:voucher, @name) %>
-            <%= hidden_field_tag(:id, @order.id) %>
             <%= button_tag(type: "submit", data: {confirm: t("voucher.apply_vou")}, class: "btn btn-outline-primary btn-sm") do %>
               <%= t "voucher.btn_voucher" %>
             <% end %>
@@ -46,6 +45,9 @@
               <%= t "voucher.btn_cancel" %>
             <% end %>
           <% end %>
+          <div class="message">
+            <%= render "orders/message" %>
+          </div>
         <hr>
         <div class= "total">
           <h5 id="total_price">

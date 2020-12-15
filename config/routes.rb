@@ -12,5 +12,6 @@ Rails.application.routes.draw do
         resources :order_details, only: :index
       end
     end
+    resources :carts, only: %i(index create)
   end
 end

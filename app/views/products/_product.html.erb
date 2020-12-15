@@ -14,7 +14,13 @@
       <div class="price">
         <%= number_to_currency product.price %>
       </div>
-      <%= link_to t("product.add_to_cart"), "#", class: "add-to-cart" %>
+      <%= form_tag(carts_path, method: :post, remote: true) do  %>
+        <%= hidden_field_tag(:product_id, product.id) %>
+        <%= hidden_field_tag(:quantity, Settings.product.min_quantity) %>
+        <%= button_tag(type: "submit", class: "add-to-cart") do %>
+          <i class="fa fa-shopping-cart"> <%= t("product.add_to_cart") %></i>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>

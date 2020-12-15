@@ -7,4 +7,20 @@ class OrderDetail < ApplicationRecord
                            greater_than: Settings.validation.number.zero}
   validates :price, presence: true,
             numericality: {greater_than: Settings.validation.number.zero}
+  validate :product_present
+  validate :order_present
+
+  private
+
+  def product_present
+    return if product
+
+    errors.add(:product, t("carts.product_not_valid"))
+  end
+
+  def order_present
+    return if order
+
+    errors.add(:order, t("carts.order_not_valid"))
+  end
 end

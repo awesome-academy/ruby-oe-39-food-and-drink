@@ -51,6 +51,7 @@ en:
       previous: "‹ PREV"
       next: "NEXT ›"
       truncate: "…"
+  price: "%{price}"
   number:
     currency:
       format:
@@ -87,4 +88,10 @@ en:
     nil_order: "You have not yet made any orders"
     not_found: "Not found order"
     old_price: "Total old price: "
-    discount: "Dsicount: "
+    discount: "Discount: "
+  search:
+    title: "Search"
+    result_search: "Result of search"
+    nil: "No product found for result searching"
+    nil_key: "Please enter search keywords"
+    nil_cate: "Category not found"

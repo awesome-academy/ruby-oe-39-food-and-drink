@@ -13,4 +13,5 @@ class Product < ApplicationRecord
   validates :price, presence: true,
             numericality: {greater_than: Settings.validation.number.zero}
   scope :order_alphabet_name, ->{order name: :asc}
+  scope :filter_product_by_name, ->(name){where("name like ?", "%#{name}%")}
 end

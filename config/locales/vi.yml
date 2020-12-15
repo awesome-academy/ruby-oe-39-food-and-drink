@@ -51,6 +51,7 @@ vi:
       previous: "‹ TRƯỚC"
       next: "TIẾP ›"
       truncate: "…"
+  price: "%{price}"
   number:
     currency:
       format:
@@ -88,3 +89,9 @@ vi:
     not_found: "Không tìm thấy đơn hàng"
     old_price: "Tổng giá gốc: "
     discount: "Được giảm: "
+  search:
+    title: "Tìm kiếm"
+    result_search: "Kết quả tìm kiếm"
+    nil: "Không tìm thấy sản phẩm nào cho kết quả tìm kiếm này"
+    nil_key: "Vui lòng nhập key tìm kiếm"
+    nil_cate: "Loại danh mục này không được tìm thấy"

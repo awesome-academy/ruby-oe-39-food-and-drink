@@ -18,5 +18,6 @@ Rails.application.routes.draw do
       root "base#home"
       resources :orders, only: %i(index)
     end
+    resources :orders, only: %i(new create)
   end
 end

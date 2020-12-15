@@ -16,6 +16,7 @@ class Order < ApplicationRecord
   extend ActiveModel::Callbacks
   define_model_callbacks :cancel, only: :after
   after_cancel :update_quantity_product_cancel
+  after_create :update_quantity_product
 
   scope :by_created_at, ->{order(delivery_time: :desc)}
 
@@ -29,6 +30,13 @@ class Order < ApplicationRecord
     order_details.map do |od|
       @product = od.product
       @product.update!(quantity: (@product.quantity + od.quantity))
+    end
+  end
+
+  def update_quantity_product
+    order_details.map do |od|
+      @product = od.product
+      @product.update!(quantity: (@product.quantity - od.quantity))
     end
   end
 end

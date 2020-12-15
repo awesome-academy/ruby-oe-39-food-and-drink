@@ -58,7 +58,7 @@ en:
       format:
         delimiter: "."
         format: "%n %u"
-        precision: 0
+        precision: 2
         separator: ","
         significant: false
         strip_insignificant_zeros: false
@@ -144,3 +144,35 @@ en:
     title: "ADMIN"
     dashboard: "ADMINISTRATOR"
     manage_order: "Manage order"
+  orders:
+    info_ship:
+      name: "Name:"
+      address: "Address:"
+      phone_number: "Phone number:"
+      email_add: "Email address:"
+      delivery_time: "Delivery time:"
+      review_order: "Review order"
+      edit_cart: "Edit cart"
+      subtotal: "Subtotal"
+      voucher: "Voucher"
+      od_detail: "Order total"
+      btn_confirm: "Confirm order"
+      title_info: "Information receiver order"
+      quantity: "Quantity: "
+      total_od: "Total after discount"
+    log_order: "Please login before checkout the orders"
+    btn_checkout: "Finish to checkout"
+    od_title: "Information your order"
+    create_fail: "Create order failed!"
+    create_od_fail: "Create order detail failed!"
+    create_success: "Create order successfully"
+  voucher:
+    title: "Voucher"
+    invalid: "Voucher is invalid!"
+    fail: "Your order not enough to apply"
+    apply_vou: "Apply voucher ?"
+    cancel_vou: "Sure remove voucher ?"
+    btn_voucher: "Apply voucher"
+    btn_cancel: "Cancel voucher"
+    remove_success: "Voucher has been removed"
+    fail_remove: "You have not yet apply voucher"

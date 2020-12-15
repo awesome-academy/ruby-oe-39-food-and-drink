@@ -17,4 +17,14 @@ module OrdersHelper
   def cal_old_total
     @total
   end
+
+  def total_price_order
+    @order.order_details.reduce(0) do |sum, order_detail|
+      if order_detail.valid?
+        sum + (order_detail.quantity * order_detail.price)
+      else
+        0
+      end
+    end
+  end
 end

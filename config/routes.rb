@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :products, only: :show
     resources :categories, only: :show
     resources :users do
-      resources :orders, only: %i(index show) do
+      resources :orders, only: %i(index show update) do
         resources :order_details, only: :index
       end
     end

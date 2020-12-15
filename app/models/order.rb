@@ -12,4 +12,21 @@ class Order < ApplicationRecord
   validates :phone_number, presence: true,
             format: {with: VALID_PHONE_REGEX}
   validates :address, presence: true
+
+  extend ActiveModel::Callbacks
+  define_model_callbacks :cancel, only: :after
+  after_cancel :update_quantity_product_cancel
+
+  def cancel
+    run_callbacks :cancel do
+      canceled!
+    end
+  end
+
+  def update_quantity_product_cancel
+    order_details.map do |od|
+      @product = od.product
+      @product.update!(quantity: (@product.quantity + od.quantity))
+    end
+  end
 end

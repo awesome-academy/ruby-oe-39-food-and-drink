@@ -8,11 +8,13 @@
           <th class="text-center"><%= t "carts.quantity" %></th>
           <th class="text-center"><%= t "carts.price" %></th>
           <th class="text-center"><%= t "carts.subtotal" %></th>
-          <th class="text-center"><a class="btn btn-sm btn-outline-danger" href="#"><%= t "carts.clear_cart" %></a></th>
+          <th class="text-center"><%=link_to t("carts.clear_cart"),clear_cart_path, class: "btn btn-sm btn-outline-danger" %></th>
         </tr>
       </thead>
       <tbody>
-        <%= render(partial: "carts/cart_row", collection: @order_details, as: "order") || t("carts.nil") %>
+        <div class= "cart_item">
+          <%= render(partial: "carts/cart_row", collection: @order_details, as: "order") || t("carts.nil")%>
+        </div>
       </tbody>
     </table>
   </div>

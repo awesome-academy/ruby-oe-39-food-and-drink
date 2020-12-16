@@ -116,6 +116,10 @@ en:
     product_not_valid: "Product not valid"
     order_not_valid: "Order not valid"
     in_stock: "In stock: "
+    verify: "Are you sure?"
+    delete_success: "Deleted Success"
+    update_success: "Updated Success"
+    delete_fail: "Deleted Fail"
   errors:
     the_form_contains:
       zero: "No error"

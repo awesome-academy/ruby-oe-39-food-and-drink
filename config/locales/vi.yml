@@ -116,6 +116,10 @@ vi:
     product_not_valid: "Sản phẩm không hợp lệ"
     order_not_valid: "Đặt hàng không hợp lệ"
     in_stock: "Kho: "
+    verify: "Bạn đã chắc chưa?"
+    delete_success: "Xóa sản phẩm thành công"
+    update_success: "Cập nhật thành công"
+    delete_fail: "Xóa thành công"
   errors:
     the_form_contains:
       zero: "Không có lỗi"

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     get "/search", to: "searchs#index"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
+    get "/clear-cart", to: "carts#clear_cart", as: :clear_cart
     resources :products, only: :show
     resources :categories, only: :show
     resources :users do
@@ -12,6 +13,6 @@ Rails.application.routes.draw do
         resources :order_details, only: :index
       end
     end
-    resources :carts, only: %i(index create)
+    resources :carts, except: %i(show edit new)
   end
 end

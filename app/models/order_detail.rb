@@ -10,6 +10,8 @@ class OrderDetail < ApplicationRecord
   validate :product_present
   validate :order_present
 
+  delegate :quantity, :name, to: :product, prefix: true
+
   private
 
   def product_present

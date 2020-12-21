@@ -55,7 +55,8 @@ end
     status: Order.statuses.values.sample,
     delivery_time: Faker::Time.backward(days: 14),
     phone_number: Faker::Number.leading_zero_number(digits: 10),
-    address: Faker::Address.full_address
+    address: Faker::Address.full_address,
+    name: Faker::Name.name
   )
 end
 

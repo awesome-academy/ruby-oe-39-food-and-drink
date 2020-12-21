@@ -16,6 +16,7 @@ vi:
     profile: "Hồ sơ"
     settings: "Cài đặt"
     log_out: "Đăng xuất"
+    page_admin: "Trang quản trị"
   footer:
     copy_right: "@2020 Copy right Foods And Drinks"
   product:
@@ -75,6 +76,9 @@ vi:
     total: "Tổng tiền: "
     submit: "Xác nhận"
     cancel: "Hủy đơn"
+    accept: "Chấp nhận"
+    refuse: "Từ chối"
+    shipping: "Đang chuyển hàng"
     view: "Xem chi tiết"
     view_cart: "Xem sản phẩm đã mua"
     order_time: "Đơn hàng được tạo vào lúc: "
@@ -92,6 +96,17 @@ vi:
     status_error: "Vui lòng kiểm tra lại trạng thái đơn hàng!"
     status_success: "Cập nhật thành công.Cảm ơn bạn!"
     status_fail: "Đã xảy ra lỗi trong quá trình cập nhật!"
+    not_found: "Không tìm thấy đơn đặt hàng!"
+    order_tracking: "Theo dõi đơn hàng"
+    order_id: "Mã đơn hàng"
+    orderer: "Người đặt hàng"
+    receiver_name: "Tên người nhận"
+    receiver_address: "Địa chỉ người nhận"
+    receiver_phone: "Số điện thoại người nhận"
+    order_date: "Ngày đặt"
+    status_order: "Tình trạng đơn hàng"
+    total_price: "Tổng tiền"
+    action: "Hành động"
   search:
     title: "Tìm kiếm"
     result_search: "Kết quả tìm kiếm"
@@ -125,4 +140,7 @@ vi:
       zero: "Không có lỗi"
       one: "Có 1 lỗi"
       other: "Biểu mẫu chứa %{count} lỗi"
-
+  admin:
+    title: "Quản trị viên"
+    dashboard: "QUẢN TRỊ VIÊN"
+    manage_order: "Quản lý đơn đặt hàng"

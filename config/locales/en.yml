@@ -16,6 +16,7 @@ en:
     profile: "Profile"
     settings: "Settings"
     log_out: "Log out"
+    page_admin: "Admin page"
   footer:
     copy_right: "@2020 Copy right Foods And Drinks"
   product:
@@ -75,6 +76,9 @@ en:
     total: "Order Total: "
     submit: "Submit"
     cancel: "Cancel"
+    accept: "Accept"
+    refuse: "Refuse"
+    shipping: "Shipping"
     view: "View details"
     view_cart: "View Cart"
     order_time: "Order made on: "
@@ -92,6 +96,17 @@ en:
     status_error: "Please check your order status!"
     status_success: "Updated Success. Thank you!"
     status_fail: "Fail to Update!"
+    not_found: "Order not found!"
+    order_tracking: "Order Tracking"
+    order_id: "Order ID"
+    orderer: "Orderer"
+    receiver_name: "Receiver name"
+    receiver_address: "Receiver address"
+    receiver_phone: "Receiver phone"
+    order_date: "Order date"
+    status_order: "Status order"
+    total_price: "Total price"
+    action: "Action"
   search:
     title: "Search"
     result_search: "Result of search"
@@ -125,3 +140,7 @@ en:
       zero: "No error"
       one: "One error"
       other: "The form contains %{count} errors"
+  admin:
+    title: "ADMIN"
+    dashboard: "ADMINISTRATOR"
+    manage_order: "Manage order"

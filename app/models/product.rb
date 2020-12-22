@@ -17,4 +17,20 @@ class Product < ApplicationRecord
   scope :filter_product_by_name, ->(name){where("name like ?", "%#{name}%")}
 
   delegate :name, to: :category, prefix: true
+
+  def avg_rating
+    if ratings.present?
+      ratings.average(:rating).round(1).to_f
+    else
+      0.0
+    end
+  end
+
+  def rating_percentage
+    if ratings.present?
+      ratings.average(:rating).round(1).to_f * 100 / 5
+    else
+      0.0
+    end
+  end
 end

@@ -931,3 +931,46 @@ span.price {
   display: flex;
   justify-content: flex-end;
 }
+.rating-box .ratings .fa{
+  font-size: 30px;
+  color: $star_color;
+  cursor: pointer;
+}
+
+.main-rating {
+  display: flex;
+}
+
+.rating-value-display {
+  font-size: 20px;
+}
+
+.star-rating {
+  position: relative;
+  width: 5em;
+  height: 1em;
+  font-size: 25px;
+  margin-top: 5px;
+}
+.star-rating-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: $star_color;
+}
+.star-rating-back {
+  color: $border-color;
+}
+
+.average-score {
+  display: flex;
+}
+.average-score-display {
+  font-size: 16px;
+}
+
+.textarea{
+  width: 250px;
+  height: 70px;
+}

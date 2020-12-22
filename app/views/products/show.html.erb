@@ -11,12 +11,10 @@
       <div class="details col-md-6">
         <h1 class="product-title"><%= @product.name %></h1>
         <div class="rating">
-          <div class="stars">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
+          <div class="star-rating mb-2">
+            <div class="star-rating-front" style="width: <%= @product.rating_percentage %>%; height: 23px;">★★★★★</div>
+            <div class="star-rating-back">★★★★★</div>
+            <small>(<%= @product.ratings.count %> <%= t("ratings.reviews") %>)</small>
           </div>
         </div>
         <h5 class="product-description">
@@ -40,7 +38,7 @@
               <i class="fa fa-shopping-cart"> <%= t("product.add_to_cart") %></i>
             <% end %>
           <% end %>
-          <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+          <%= render "ratings/form", rating: @rating, product: @product %>
         </div>
       </div>
     </div>

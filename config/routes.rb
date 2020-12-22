@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     resources :carts, except: %i(show edit new)
     namespace :admin do
       root "base#home"
-      resources :orders, only: %i(index)
+      resources :orders, only: %i(index update)
     end
     resources :orders, only: %i(new create)
   end

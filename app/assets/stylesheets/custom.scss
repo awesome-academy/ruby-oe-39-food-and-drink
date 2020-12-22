@@ -22,6 +22,7 @@ $btn_hover: #185d4f;
 $control-color: #606975;
 $cart-color: #374250;
 $cart-hover-color: #0da9ef;
+$lightgrey: lightgrey;
 
 /* Header */
 .logo {
@@ -89,6 +90,10 @@ $cart-hover-color: #0da9ef;
 
 .copy-right {
   font-size: 15px;
+}
+
+.btn-search {
+  background-color: $white_color ;
 }
 
 /* form login */
@@ -740,4 +745,183 @@ select.form-control {
 
 .form-control-sm:not(textarea) {
   height: 36px;
+}
+
+/* Order */
+* {
+  box-sizing: border-box;
+}
+
+.form-checkout {
+  color: $color_222;
+}
+
+.form-checkout h2{
+  text-transform: uppercase;
+  margin: 8px;
+  color: $price_color;
+}
+
+.row-info {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%;
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%;
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%;
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.containerr {
+  background-color: $color_e5e5;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid $lightgrey;
+  border-radius: 20px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.info-add {
+  margin-top: 16px;
+}
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn-checkout {
+  background-color: $background_color;
+  color: $white_color;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn-checkout:hover {
+  background-color: $btn_hover;
+}
+
+a {
+  color: $about-color;
+}
+
+hr {
+  border: 1px solid $lightgrey;
+}
+
+span.price {
+  float: right;
+  color: $gray-lighter;
+}
+
+.total {
+  color: $black_color;
+  font-style: italic;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-order {
+  font-size: 1.4rem;
+  color: $about-color;
+}
+.time-delivey {
+  margin: 20px 0;
+  display: inline-flex;
+  justify-content: flex-start;
+}
+
+.delivery {
+  margin-right: 16px;
+}
+
+.coupon-form {
+  display: inline-block;
+  width: 100%;
+  max-width: 100px;
+  margin-right: 12px;
+}
+
+.voucher {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+/** MEDIA QUERIES **/
+@media only screen and (max-width: 989px){
+  .span1{
+    margin-bottom: 15px;
+    clear:both;
+  }
+}
+
+@media only screen and (max-width: 764px){
+  .inverse-1{
+    float:right;
+  }
+}
+
+@media only screen and (max-width: 586px){
+  .cart-titles {
+    display:none;
+  }
+  .panel {
+    margin-bottom: 1px;
+  }
+}
+
+@media only screen and (max-width: 486px){
+  .col-xss-12 {
+    width:100%;
+  }
+  .cart-img-show {
+    display: none;
+  }
+  .btn-submit-fix {
+    width:100%;
+  }
+}
+.cancel_voucher {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
 }

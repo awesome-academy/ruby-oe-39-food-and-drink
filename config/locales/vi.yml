@@ -58,7 +58,7 @@ vi:
       format:
         delimiter: "."
         format: "%n %u"
-        precision: 0
+        precision: 2
         separator: ","
         significant: false
         strip_insignificant_zeros: false
@@ -144,3 +144,35 @@ vi:
     title: "Quản trị viên"
     dashboard: "QUẢN TRỊ VIÊN"
     manage_order: "Quản lý đơn đặt hàng"
+  orders:
+    info_ship:
+      name: "Tên:"
+      address: "Địa chỉ:"
+      phone_number: "Số điện thoại:"
+      email_add: "Địa chỉ email:"
+      delivery_time: "Thời gian giao:"
+      review_order: "Đơn đặt hàng"
+      edit_cart: "Chỉnh sửa giỏ hàng"
+      subtotal: "Tổng tiền"
+      voucher: "Giảm giá"
+      od_detail: "Tổng tiền đơn hàng"
+      btn_confirm: "Xác nhận đơn hàng"
+      title_info: "Thông tin người nhận hàng"
+      quantity: "Số lượng: "
+      total_od: "Tổng tiền sau khi giảm"
+    log_order: "Vui lòng đăng nhập trước khi thanh toán "
+    btn_checkout: "Hoàn thành thanh toán"
+    od_title: "Thông tin đơn đặt hàng"
+    create_fail: "Tạo đơn hàng thất bại !"
+    create_od_fail: "Tạo chi tiết đơn hàng thất bại !"
+    create_success: "Tạo đơn hàng thành công !"
+  voucher:
+    title: "Mã giảm giá"
+    invalid: "Mã giảm giá không hợp lệ!"
+    fail: "Đơn hàng của bạn không đủ để áp dụng mã giảm giá này"
+    apply_vou: "Áp dụng mã giảm giá ?"
+    cancel_vou: "Bạn có đồng ý hủy bỏ mã giảm giá ?"
+    btn_voucher: "Áp dụng"
+    btn_cancel: "Hủy bỏ mã giảm giá"
+    remove_success: "Mã giảm giá đã được hủy bỏ"
+    fail_remove: "Bạn chưa sử dụng mã giảm giá nào"

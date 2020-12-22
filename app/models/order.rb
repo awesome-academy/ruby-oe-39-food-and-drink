@@ -19,6 +19,7 @@ class Order < ApplicationRecord
   after_create :update_quantity_product
 
   scope :by_created_at, ->{order(delivery_time: :desc)}
+  scope :orderby_od_create, ->{order(created_at: :desc)}
 
   def cancel
     run_callbacks :cancel do

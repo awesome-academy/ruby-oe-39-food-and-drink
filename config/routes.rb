@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
     get "/clear-cart", to: "carts#clear_cart", as: :clear_cart
+    post "/orders/new", to: "orders#voucher"
+    delete "/orders/new", to: "orders#cancel_voucher"
     resources :products, only: :show
     resources :categories, only: :show
     resources :users do

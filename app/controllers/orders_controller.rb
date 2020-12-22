@@ -3,11 +3,12 @@ class OrdersController < ApplicationController
   before_action :find_order, only: %i(show update)
   before_action :logged_in_user
   before_action :load_cart_product, except: %i(show index update)
+  before_action :check_voucher, only: %i(new create)
 
   def show; end
 
   def index
-    @orders = current_user.orders
+    @orders = current_user.orders.orderby_od_create
     return if @orders.present?
 
     flash[:danger] = t "order.nil_order"
@@ -32,7 +33,8 @@ class OrdersController < ApplicationController
   def new; end
 
   def create
-    @order = current_user.orders.new(order_params)
+    @voucher_id = session[:voucher] ? session[:voucher]["id"] : nil
+    @order = current_user.orders.new order_params.merge(voucher_id: @voucher_id)
     ActiveRecord::Base.transaction do
       save_product_od
       @order.save!
@@ -41,6 +43,40 @@ class OrdersController < ApplicationController
   rescue StandardError
     flash[:danger] = t "orders.create_fail"
     render :new
+  end
+
+  def voucher
+    @name = params[:voucher]
+    @voucher = Voucher.find_by(name: @name)
+    @total = total_price_order
+    if @voucher.present?
+      if @total >= @voucher.condition
+        @total -= @voucher.discount
+        session[:voucher] = Hash.new
+        session[:voucher] = @voucher
+      else
+        @message = t "voucher.fail"
+      end
+      respond_to do |format|
+        format.js
+      end
+    else
+      check_voucher
+      @message = t "voucher.invalid"
+    end
+  end
+
+  def cancel_voucher
+    @total = total_price_order
+    if session[:voucher]
+      session.delete :voucher
+      @message = t "voucher.remove_success"
+    else
+      @message = t "voucher.fail_remove"
+    end
+    respond_to do |format|
+      format.js
+    end
   end
 
   private
@@ -83,6 +119,7 @@ class OrdersController < ApplicationController
 
   def save_success
     session.delete :carts
+    session.delete :voucher
     flash[:success] = t "orders.create_success"
     redirect_to user_orders_path(current_user)
   end
@@ -104,6 +141,15 @@ class OrdersController < ApplicationController
     end
   end
 
+  def check_voucher
+    @total = total_price_order
+    if session[:voucher]
+      @total -= session[:voucher]["discount"]
+    else
+      @total
+    end
+  end
+
   def save_product_od
     cart = current_carts
     cart.each do |key, value|
@@ -117,6 +163,7 @@ class OrdersController < ApplicationController
   end
 
   def order_params
-    params.require(:order).permit(:address, :phone_number, :delivery_time)
+    params.require(:order).permit(:name, :address,
+                                  :phone_number, :delivery_time)
   end
 end
